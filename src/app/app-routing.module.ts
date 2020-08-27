@@ -13,10 +13,10 @@ const routes: Routes = [
     path: ''
     , children: [
       {
-        path: 'features', component: FeaturesListComponent,
+        path: 'features', 
         children: [
-          { path: 'add', component: AddFeatureComponent },
-          // { path: ':id', component: FeatureDetailsComponent},
+          { path: '', component: FeaturesListComponent},
+          { path: 'add', component: AddFeatureComponent }
         ]
       },
       {

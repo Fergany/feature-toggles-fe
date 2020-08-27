@@ -9,6 +9,7 @@ import { CustomersListComponent } from './customers/customers-list/customers-lis
 import { CommonModule } from '@angular/common';
 import { CustomerFeaturesListComponent } from './customers/customer-features-list/customer-features-list.component';
 import { AddCustomerFeaturesComponent } from './customers/add-customer-features/add-customer-features.component';
+import { AddFeatureComponent } from './features/add-feature/add-feature.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddCustomerFeaturesComponent } from './customers/add-customer-features/
     CustomersListComponent,
     FeaturesListComponent,
     CustomerFeaturesListComponent,
-    AddCustomerFeaturesComponent
+    AddCustomerFeaturesComponent,
+    AddFeatureComponent
   ],
   imports: [
     BrowserModule,
