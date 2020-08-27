@@ -1,15 +1,15 @@
-<p>customers-list works!</p>
+<h1 class="text-info">Customers</h1>
 
-<div *ngIf="isDataAvailable" class="container">
-  <div class="row" *ngFor="let customer of customers">
-    <div class="col-sm">
-      {{customer.id}}
-    </div>
-    <div class="col-sm">
-      {{customer.name}}
-    </div>
-    <div class="col-sm">
-        <button [routerLink]="['/customers', customer.id, 'features']">Features</button>
+<div class="row">
+  <div class="col-4 pt-3 pb-3" *ngFor="let customer of customers">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{customer.name}}</h5>
+        
+        <div class="d-flex justify-content-end mt-2">
+          <a [routerLink]="['/customers', customer.id, 'features']" class="btn btn-info mr-1">Features</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
