@@ -1,4 +1,7 @@
-<h1 class="text-info">Features</h1>
+<div class="d-flex justify-content-between">
+  <h1 class="text-info">Features</h1>
+  <button type="button" [routerLink]="['/features', '/add']" class="btn btn-info mr-1">New Feature</button>
+</div>
 
 <div class="row">
   <div class="col-4 pt-3 pb-3" *ngFor="let feature of features">
@@ -12,8 +15,9 @@
           <div><small>{{feature.inverted? 'Inverted': 'Not Inverted'}}</small></div>
         </div>
         <div class="d-flex justify-content-end mt-2">
-          <a [routerLink]="['/feature', feature.id]" class="btn btn-info mr-1">Edit</a>
-          <a [routerLink]="['/feature', feature.id, '/archive']" class="btn btn-info">Archive</a>
+          <button type="button" [routerLink]="['/features', feature.id]" class="btn btn-info mr-1">Edit</button>
+          <button type="button" [routerLink]="['/features', feature.id, '/archive']"
+            class="btn btn-info">Archive</button>
         </div>
       </div>
     </div>

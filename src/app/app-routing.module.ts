@@ -15,8 +15,8 @@ const routes: Routes = [
       {
         path: 'features', component: FeaturesListComponent,
         children: [
+          { path: 'add', component: AddFeatureComponent },
           // { path: ':id', component: FeatureDetailsComponent},
-          { path: 'add', component: AddFeatureComponent }
         ]
       },
       {
