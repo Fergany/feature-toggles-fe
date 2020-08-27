@@ -11,10 +11,15 @@ export class AddCustomerFeaturesComponent implements OnInit {
   customerId: String;
   features: any;
   isDataAvailable: boolean = false;
+  customerName: string;
 
   constructor(private route: ActivatedRoute, private router: Router,private service: AddCustomerFeaturesService) { }
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      this.customerName = params['name'];
+    });
+
     this.route.paramMap.subscribe(params => {
       this.customerId = params.get("id")
     });
@@ -30,7 +35,7 @@ export class AddCustomerFeaturesComponent implements OnInit {
   assignFeature(customerId, featureId){
     this.service.assignFeature(customerId, featureId).subscribe(res => {
       console.log(res);
-      this.router.navigate(['/customers', this.customerId, 'features']);
+      this.router.navigate(['/customers', this.customerId, 'features'], { queryParams: { name: this.customerName }});
     });
   }
 }
