@@ -12,4 +12,8 @@ export class AddFeatureComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  save() {
+    alert('Create feature is coming soon');
+  }
+
 }
