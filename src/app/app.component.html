@@ -1,19 +1,19 @@
-<div class="toolbar" role="banner">
-  <img width="40" alt="Logo" src="../assets/logo.jpg" />
-  <span>Welcome To Feature Toggle</span>
-  <div class="spacer"></div>
+<nav class="navbar navbar-light bg-info">
+  <a class="navbar-brand text-black" href="#">
+    <img src="../assets/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="logo">
+    Welcome To Feature Toggle
+  </a>
+</nav>
+
+<div class="row p-2 bg-light">
+  <div class="col-6">
+    <button type="button" class="btn btn-outline-info btn-block" [routerLink]="['/customers']">Customers</button>
+  </div>
+  <div class="col-6">
+    <button type="button" class="btn btn-outline-info btn-block" [routerLink]="['/features']">Features</button>
+  </div>
 </div>
 
-<div class="content" role="main">
-  <div class="card-container">
-    <a class="card" [routerLink]="['/customers']">
-      <span>Customers</span>
-    </a>
-
-    <a class="card" [routerLink]="['/features']">
-      <span>Features</span>
-    </a>
-  </div>
-
+<div class="p-2 bg-light">
   <router-outlet></router-outlet>
 </div>
