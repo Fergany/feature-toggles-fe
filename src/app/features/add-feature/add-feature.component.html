@@ -1,1 +1,30 @@
-<p>add-feature works!</p>
+<div class="d-flex justify-content-between">
+  <h1 class="text-info">Create New Feature</h1>
+</div>
+
+<form class="text-info">
+  <div class="form-group">
+    <label for="displayName">Display Name</label>
+    <input type="text" class="form-control" id="displayName">
+  </div>
+  <div class="form-group">
+    <label for="technicalName">Technical Name</label>
+    <input type="text" class="form-control" id="technicalName">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" id="description" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="expiresOn">Expires On</label>
+    <input type="date" class="form-control" id="expiresOn">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="inverted">
+    <label class="form-check-label" for="inverted">Inverted</label>
+  </div>
+
+  <div class="d-flex justify-content-end">
+    <button type="submit" class="btn btn-info">Add</button>
+  </div>
+</form>
