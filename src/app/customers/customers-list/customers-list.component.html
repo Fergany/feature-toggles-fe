@@ -1,0 +1,15 @@
+<p>customers-list works!</p>
+
+<div *ngIf="isDataAvailable" class="container">
+  <div class="row" *ngFor="let customer of customers">
+    <div class="col-sm">
+      {{customer.id}}
+    </div>
+    <div class="col-sm">
+      {{customer.name}}
+    </div>
+    <div class="col-sm">
+        <button [routerLink]="['/customers', customer.id, '/features']">Features</button>
+    </div>
+  </div>
+</div>

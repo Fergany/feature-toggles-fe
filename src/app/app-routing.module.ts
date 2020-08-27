@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { FeaturesListComponent } from './features/features-list/features-list.component';
 import { AddFeatureComponent } from './features/add-feature/add-feature.component';
 import { CustomerFeaturesListComponent } from './customers/customer-features-list/customer-features-list.component';
+import { CustomersListComponent } from './customers/customers-list/customers-list.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'customers', //component: CustomersListComponent,
+        path: 'customers', component: CustomersListComponent,
         children: [
           { path: ':id/features', component: CustomerFeaturesListComponent }
         ]
