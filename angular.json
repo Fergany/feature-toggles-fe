@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "feature-toggles-fe"
+    }
+  },
+  "defaultProject": "feature-toggles-fe",
+  "cli": {
+    "analytics": false
+  }
 }
