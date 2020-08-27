@@ -17,8 +17,11 @@ export class FeaturesListComponent implements OnInit {
       this.features = res;
       this.isDataAvailable = true;
       console.log("FEATURES: ", this.features);
-      
-    });
 
-}
+    });
+  }
+
+  archive() {
+    alert('Archiving is coming soon');
+  }
 }
