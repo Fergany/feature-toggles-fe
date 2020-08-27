@@ -1,30 +1,23 @@
-<p>customer-features-list works!</p>
+<h1 class="text-info">Features</h1>
 <button [routerLink]="['/customers', customerId, 'features', 'add']">Add Features</button>
-<div class="container">
-  <div class="row" *ngFor="let customerFeature of customerFeatures">
-    <div class="col-sm">
-      {{customerFeature.feature.id}}
-    </div>
-    <div class="col-sm">
-      {{customerFeature.feature.displayName}}
-    </div>
-    <div class="col-sm">
-      {{customerFeature.feature.technicalName}}
-    </div>
-    <div class="col-sm">
-      {{customerFeature.feature.inverted}}
-    </div>
-    <div class="col-sm">
-      {{customerFeature.feature.expiresOn}}
-    </div>
-    <div class="col-sm">
-      {{customerFeature.feature.description}}
-    </div>
-    <div class="col-sm">
-      {{customerFeature.active}}
-    </div>
-    <div class="col-sm">
-      {{customerFeature.assignedAt}}
+<div class="row">
+  <div class="col-4 pt-3 pb-3" *ngFor="let customerFeature of customerFeatures">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{customerFeature.feature.displayName}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{customerFeature.feature.technicalName}}</h6>
+        <p class="card-text">{{customerFeature.feature.description}}</p>
+        <div class="d-flex justify-content-between">
+          <div><strong>{{customerFeature.active? 'Active': 'Not Active'}}</strong></div>
+          <div><strong>Assigned At: {{customerFeature.assignedAt}}</strong></div>
+          <div><strong>Expires On: {{customerFeature.feature.expiresOn}}</strong></div>
+          <div><small>{{customerFeature.feature.inverted? 'Inverted': 'Not Inverted'}}</small></div>
+        </div>
+        <!-- <div class="d-flex justify-content-end mt-2">
+          <a [routerLink]="['/feature', feature.id]" class="btn btn-info mr-1">Edit</a>
+          <a [routerLink]="['/feature', feature.id, '/archive']" class="btn btn-info">Archive</a>
+        </div> -->
+      </div>
     </div>
   </div>
 </div>
