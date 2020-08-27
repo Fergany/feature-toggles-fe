@@ -1,5 +1,4 @@
 <p>features-list works!</p>
-<p>{{features}}</p>
 
 <div class="container">
   <div class="row" *ngFor="let feature of features">
@@ -7,10 +6,25 @@
       {{feature.id}}
     </div>
     <div class="col-sm">
-      {{feature.id}}
+      {{feature.displayName}}
     </div>
     <div class="col-sm">
-      {{feature.id}}
+      {{feature.technicalName}}
+    </div>
+    <div class="col-sm">
+      {{feature.inverted}}
+    </div>
+    <div class="col-sm">
+      {{feature.expiresOn}}
+    </div>
+    <div class="col-sm">
+      {{feature.description}}
+    </div>
+    <div class="col-sm">
+      <button [routerLink]="['/feature', feature.id]">edit</button>
+    </div>
+    <div class="col-sm">
+      <button [routerLink]="['/feature', feature.id, '/archive']">archive</button>
     </div>
   </div>
 </div>

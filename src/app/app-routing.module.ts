@@ -13,11 +13,12 @@ const routes: Routes = [
       {
         path: 'features', component: FeaturesListComponent, 
         children: [
+          // { path: ':id', component: FeatureDetailsComponent},
           { path: 'add', component: AddFeatureComponent }
         ]
       },
       {
-        path: 'customer', 
+        path: 'customers', //component: CustomersListComponent,
         children: [
           { path: ':id/features', component: CustomerFeaturesListComponent }
         ]
