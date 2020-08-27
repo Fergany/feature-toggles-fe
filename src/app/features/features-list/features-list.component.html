@@ -1,30 +1,35 @@
-<p>features-list works!</p>
+<h1>Features</h1>
 
 <div class="container">
-  <div class="row" *ngFor="let feature of features">
-    <div class="col-sm">
-      {{feature.id}}
-    </div>
-    <div class="col-sm">
-      {{feature.displayName}}
-    </div>
-    <div class="col-sm">
-      {{feature.technicalName}}
-    </div>
-    <div class="col-sm">
-      {{feature.inverted}}
-    </div>
-    <div class="col-sm">
-      {{feature.expiresOn}}
-    </div>
-    <div class="col-sm">
-      {{feature.description}}
-    </div>
-    <div class="col-sm">
-      <button [routerLink]="['/feature', feature.id]">edit</button>
-    </div>
-    <div class="col-sm">
-      <button [routerLink]="['/feature', feature.id, '/archive']">archive</button>
+  <div class="row">
+    <div class="col-4" *ngFor="let feature of features">
+      <div class="row bg-light rounded w-100 mb-2 p-1 border-left border-right">
+        <div class="col-12  text-center">
+          {{feature.displayName}}
+        </div>
+        <div class="col-12 text-center">
+          {{feature.technicalName}}
+        </div>
+        <div class="col-12 text-center">
+          {{feature.inverted}}
+        </div>
+        <div class="col-12 text-center">
+          {{feature.expiresOn}}
+        </div>
+        <div class="col-12 text-center mb-2">
+          {{feature.description}}
+        </div>
+        <div class="col-6">
+          <button type="button" class="btn btn-default btn-sm" [routerLink]="['/feature', feature.id]">
+            Edit
+          </button>
+        </div>
+        <div class="col-6">
+          <button type="button" class="btn btn-default btn-sm" [routerLink]="['/feature', feature.id, '/archive']">
+            Archive
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
