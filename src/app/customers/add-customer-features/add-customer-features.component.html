@@ -1,4 +1,5 @@
-<p>features-list works!</p>
+<p>add-customer-features works!</p>
+
 
 <div class="container">
   <div class="row" *ngFor="let feature of features">
@@ -20,11 +21,6 @@
     <div class="col-sm">
       {{feature.description}}
     </div>
-    <div class="col-sm">
-      <button [routerLink]="['/feature', feature.id]">edit</button>
-    </div>
-    <div class="col-sm">
-      <button [routerLink]="['/feature', feature.id, '/archive']">archive</button>
-    </div>
+    
   </div>
 </div>

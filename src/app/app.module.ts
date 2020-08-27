@@ -4,15 +4,25 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FeaturesListComponent } from './features/features-list/features-list.component';
+import { CustomersListComponent } from './customers/customers-list/customers-list.component';
+import { CommonModule } from '@angular/common';
+import { CustomerFeaturesListComponent } from './customers/customer-features-list/customer-features-list.component';
+import { AddCustomerFeaturesComponent } from './customers/add-customer-features/add-customer-features.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomersListComponent,
+    FeaturesListComponent,
+    CustomerFeaturesListComponent,
+    AddCustomerFeaturesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

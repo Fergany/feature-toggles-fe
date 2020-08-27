@@ -1,0 +1,30 @@
+<p>customer-features-list works!</p>
+<button [routerLink]="['/customers', customerId, 'features', 'add']">Add Features</button>
+<div class="container">
+  <div class="row" *ngFor="let customerFeature of customerFeatures">
+    <div class="col-sm">
+      {{customerFeature.feature.id}}
+    </div>
+    <div class="col-sm">
+      {{customerFeature.feature.displayName}}
+    </div>
+    <div class="col-sm">
+      {{customerFeature.feature.technicalName}}
+    </div>
+    <div class="col-sm">
+      {{customerFeature.feature.inverted}}
+    </div>
+    <div class="col-sm">
+      {{customerFeature.feature.expiresOn}}
+    </div>
+    <div class="col-sm">
+      {{customerFeature.feature.description}}
+    </div>
+    <div class="col-sm">
+      {{customerFeature.active}}
+    </div>
+    <div class="col-sm">
+      {{customerFeature.assignedAt}}
+    </div>
+  </div>
+</div>
