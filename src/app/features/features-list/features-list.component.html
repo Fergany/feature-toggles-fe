@@ -11,7 +11,7 @@
         <h6 class="card-subtitle mb-2 text-muted">{{feature.technicalName}}</h6>
         <p class="card-text">{{feature.description}}</p>
         <div class="d-flex justify-content-between">
-          <div><strong>Expires On: {{feature.expiresOn}}</strong></div>
+          <div><strong>Expires On: {{feature.expiresOn | date:'yyyy, MM, dd'}}</strong></div>
           <div><small>{{feature.inverted? 'Inverted': 'Not Inverted'}}</small></div>
         </div>
         <div class="d-flex justify-content-end mt-2">

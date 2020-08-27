@@ -15,10 +15,10 @@
         <h6 class="card-subtitle mb-2 text-muted">{{customerFeature.feature.technicalName}}</h6>
         <p class="card-text">{{customerFeature.feature.description}}</p>
         <div class="d-flex justify-content-between">
-          <div><small>Expires On: {{customerFeature.feature.expiresOn | date:'yyyy,MM,dd'}}</small></div>
+          <div><small>Expires On: {{customerFeature.feature.expiresOn | date:'yyyy, MM, dd'}}</small></div>
           <div><small>{{customerFeature.feature.inverted? 'Inverted': 'Not Inverted'}}</small></div>
         </div>
-        <small>Assigned At: {{customerFeature.assignedAt | date:'yyyy,MM,dd'}}</small>
+        <small>Assigned At: {{customerFeature.assignedAt | date:'yyyy, MM, dd'}}</small>
       </div>
     </div>
   </div>
