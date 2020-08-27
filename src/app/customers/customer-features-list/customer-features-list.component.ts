@@ -10,7 +10,7 @@ import { CustomerFeaturesListService } from './customer-features-list.service';
 export class CustomerFeaturesListComponent implements OnInit {
 
   customerId: String;
-  features: any;
+  customerFeatures: any;
   isDataAvailable:boolean = false;
 
   constructor(private route: ActivatedRoute, private service: CustomerFeaturesListService) { }
@@ -21,9 +21,9 @@ export class CustomerFeaturesListComponent implements OnInit {
     });
     
     this.service.getFeatures(this.customerId).subscribe(res =>{
-      this.features = res;
+      this.customerFeatures = res;
       this.isDataAvailable = true;
-      console.log("FEATURES: ", this.features);
+      console.log("CUSTOMERS_FEATURES: ", this.customerFeatures);
     });
   }
 

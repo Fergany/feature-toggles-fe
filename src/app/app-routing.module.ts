@@ -19,8 +19,9 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'customers', component: CustomersListComponent,
+        path: 'customers',
         children: [
+          { path: '', component: CustomersListComponent },
           { path: ':id/features', component: CustomerFeaturesListComponent }
         ]
       }

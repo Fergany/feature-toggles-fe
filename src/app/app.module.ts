@@ -7,13 +7,14 @@ import { AppComponent } from './app.component';
 import { FeaturesListComponent } from './features/features-list/features-list.component';
 import { CustomersListComponent } from './customers/customers-list/customers-list.component';
 import { CommonModule } from '@angular/common';
+import { CustomerFeaturesListComponent } from './customers/customer-features-list/customer-features-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomersListComponent,
-    FeaturesListComponent
-    
+    FeaturesListComponent,
+    CustomerFeaturesListComponent
   ],
   imports: [
     BrowserModule,

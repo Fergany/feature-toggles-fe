@@ -1,14 +1,30 @@
 <p>customer-features-list works!</p>
+
 <div class="container">
-    <div class="row" *ngFor="let feature of features">
-      <div class="col-sm">
-        {{feature.id}}
-      </div>
-      <div class="col-sm">
-        {{feature.id}}
-      </div>
-      <div class="col-sm">
-        {{feature.id}}
-      </div>
+  <div class="row" *ngFor="let customerFeature of customerFeatures">
+    <div class="col-sm">
+      {{customerFeature.feature.id}}
+    </div>
+    <div class="col-sm">
+      {{customerFeature.feature.displayName}}
+    </div>
+    <div class="col-sm">
+      {{customerFeature.feature.technicalName}}
+    </div>
+    <div class="col-sm">
+      {{customerFeature.feature.inverted}}
+    </div>
+    <div class="col-sm">
+      {{customerFeature.feature.expiresOn}}
+    </div>
+    <div class="col-sm">
+      {{customerFeature.feature.description}}
+    </div>
+    <div class="col-sm">
+      {{customerFeature.active}}
+    </div>
+    <div class="col-sm">
+      {{customerFeature.assignedAt}}
     </div>
   </div>
+</div>
