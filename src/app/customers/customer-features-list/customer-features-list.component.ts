@@ -9,18 +9,23 @@ import { CustomerFeaturesListService } from './customer-features-list.service';
 })
 export class CustomerFeaturesListComponent implements OnInit {
 
-  customerId: String;
+  customerId: string;
   customerFeatures: any;
-  isDataAvailable:boolean = false;
+  isDataAvailable: boolean = false;
+  name: string;
 
   constructor(private route: ActivatedRoute, private service: CustomerFeaturesListService) { }
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      this.name = params['name'];
+    });
+
     this.route.paramMap.subscribe(params => {
       this.customerId = params.get("id")
     });
-    
-    this.service.getFeatures(this.customerId).subscribe(res =>{
+
+    this.service.getFeatures(this.customerId).subscribe(res => {
       this.customerFeatures = res;
       this.isDataAvailable = true;
       console.log("CUSTOMERS_FEATURES: ", this.customerFeatures);
