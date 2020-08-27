@@ -35,7 +35,7 @@ export class AddCustomerFeaturesComponent implements OnInit {
   assignFeature(customerId, featureId){
     this.service.assignFeature(customerId, featureId).subscribe(res => {
       console.log(res);
-      this.router.navigate(['/customers', this.customerId, 'features']);
+      this.router.navigate(['/customers', this.customerId, 'features'], { queryParams: { name: this.customerName }});
     });
   }
 }
