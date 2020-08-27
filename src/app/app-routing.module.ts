@@ -10,10 +10,10 @@ import { AddCustomerFeaturesComponent } from './customers/add-customer-features/
 
 const routes: Routes = [
   {
-    path: '', component: AppComponent
+    path: ''
     , children: [
       {
-        path: 'features', component: FeaturesListComponent, 
+        path: 'features', component: FeaturesListComponent,
         children: [
           // { path: ':id', component: FeatureDetailsComponent},
           { path: 'add', component: AddFeatureComponent }
@@ -35,6 +35,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { 
-  
+export class AppRoutingModule {
+
 }
