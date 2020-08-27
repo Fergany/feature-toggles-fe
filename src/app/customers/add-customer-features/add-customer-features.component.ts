@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddCustomerFeaturesService } from './add-customer-features.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-customer-features',
@@ -12,7 +12,7 @@ export class AddCustomerFeaturesComponent implements OnInit {
   features: any;
   isDataAvailable: boolean = false;
 
-  constructor(private route: ActivatedRoute, private service: AddCustomerFeaturesService) { }
+  constructor(private route: ActivatedRoute, private router: Router,private service: AddCustomerFeaturesService) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -23,6 +23,14 @@ export class AddCustomerFeaturesComponent implements OnInit {
       this.isDataAvailable = true;
       console.log("FEATURES: ", this.features);
       
+    });
+    
+  }
+
+  assignFeature(customerId, featureId){
+    this.service.assignFeature(customerId, featureId).subscribe(res => {
+      console.log(res);
+      this.router.navigate(['/customers', this.customerId, 'features']);
     });
   }
 }
